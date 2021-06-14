@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:navigationIcon="?attr/homeAsUpIndicator"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorprimary">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="left"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/back_arrow"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:visibility="visible"
+                    android:layout_marginRight="8dp"
+                    android:backgroundTint="@color/white"
+                    android:background="@drawable/ic_baseline_arrow_back_ios_24" />
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Toolbar Title"
+                    android:letterSpacing="-0.01"
+                    android:gravity="start"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"/>
+
+
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/toolbar"
+            android:layout_margin="15dp"
+            android:elevation="5dp"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Select Operator" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:id="@+id/spinner"
+                    android:layout_marginTop="10dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:id="@+id/ed_mobile"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:hint="Mobile Number"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/colorprimary" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"></View>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ed_amount"
+                        android:background="@color/white"
+                        android:hint="Amount"
+                        android:inputType="number"
+                        android:textColorHint="@color/black"
+
+                        android:textColor="@color/colorprimary" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"></View>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Submit"
+                    android:background="@color/colorprimary"
+                    android:id="@+id/submit"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    <ProgressBar
+        android:layout_width="40dp"
+        android:id="@+id/progress_circular"
+        android:layout_gravity="center|center_vertical"
+        android:visibility="gone"
+        android:layout_height="40dp"></ProgressBar>
+    </LinearLayout>
