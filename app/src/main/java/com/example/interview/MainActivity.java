@@ -154,6 +154,7 @@ public class MainActivity extends AppCompatActivity {
                 .enqueue(new Callback<JsonObject>() {
                     @Override
                     public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                        if(response.body().get("response").equals("1"){
                         Transaction transaction = new Transaction(response.body().get("amount").getAsString(),
                                 response.body().get("mobile").getAsString(),
                                 response.body().get("txnid").getAsString(),
@@ -168,6 +169,7 @@ public class MainActivity extends AppCompatActivity {
                                 startActivity(intent);
                             }
                         }, 5000);
+                        }
 
                     }
 
