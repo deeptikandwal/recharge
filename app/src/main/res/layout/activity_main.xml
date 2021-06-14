@@ -86,7 +86,7 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="45dp"
                         android:background="@color/white"
                         android:id="@+id/ed_mobile"
                         android:inputType="number"
@@ -107,7 +107,7 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="45dp"
                         android:id="@+id/ed_amount"
                         android:background="@color/white"
                         android:hint="Amount"
