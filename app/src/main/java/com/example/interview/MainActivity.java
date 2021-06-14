@@ -169,6 +169,10 @@ public class MainActivity extends AppCompatActivity {
                                 startActivity(intent);
                             }
                         }, 5000);
+                        }else{
+                            progress_circular.setVisibility(View.GONE);
+                            Toast.makeText(MainActivity.this, response.body().get("message").getAsString(), Toast.LENGTH_SHORT).show();
+
                         }
 
                     }
